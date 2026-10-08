@@ -1,0 +1,3 @@
+BUILD PASS: 8 production files, JavaScript syntax checked, zero runtime dependencies.
+Output: dist/
+Run: node dist/server.mjs

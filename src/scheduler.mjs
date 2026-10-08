@@ -1,10 +1,10 @@
 /** Single-day, single-person, non-preemptive scheduling. Minutes are integers. */
 export const LIMITS=Object.freeze({tasks:8,blocks:32,day:1440,recoveryOptions:6});
 const minute=n=>Number.isInteger(n)&&n>=0&&n<=LIMITS.day;
-export function validatePlan(tasks,blocks,now){
+export function validatePlan(tasks,blocks,now,{allowEmpty=false}={}){
  const errors=[];
  if(!minute(now))errors.push('بداية التخطيط يجب أن تكون دقيقة صحيحة داخل اليوم.');
- if(!Array.isArray(tasks)||tasks.length<1||tasks.length>LIMITS.tasks)errors.push('أدخل من التزام واحد إلى ثمانية التزامات.');
+ if(!Array.isArray(tasks)||tasks.length<(allowEmpty?0:1)||tasks.length>LIMITS.tasks)errors.push('أدخل من التزام واحد إلى ثمانية التزامات.');
  if(!Array.isArray(blocks)||blocks.length>LIMITS.blocks)errors.push('يمكن إدخال اثنين وثلاثين حدثًا ثابتًا كحد أقصى.');
  const ids=new Set();
  if(Array.isArray(tasks))for(const t of tasks){

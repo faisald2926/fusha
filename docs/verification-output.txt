@@ -1,18 +1,19 @@
-✔ production build contains executable site, core modules and real evidence (290.1358ms)
-✔ searches another order when earliest-deadline greedy fails (3.2917ms)
-✔ delay removes feasibility and every baseline interval satisfies constraints (1.8036ms)
-✔ pre-existing infeasibility is never blamed on delay (0.3944ms)
-✔ minute-grid oracle agrees over 200 deterministic small plans (5.4625ms)
-✔ invalid input is rejected with Arabic explanations (1.0999ms)
-✔ 8 tasks complete and joint conflict explains recoverable removal sets (3.2132ms)
-✔ local HTTP server restricts methods, paths, origin and host (120.9777ms)
-✔ hidden and idle time are excluded from active time but counted as wall time (2.0848ms)
-✔ local decisions survive reopening and clearing preserves unrelated data (1.7662ms)
-ℹ tests 10
+✔ production build contains executable site, core modules and real evidence (253.6794ms)
+✔ empty saved plan can reopen while analysis still requires a task (2.3039ms)
+✔ searches another order when earliest-deadline greedy fails (1.4041ms)
+✔ delay removes feasibility and every baseline interval satisfies constraints (0.4548ms)
+✔ pre-existing infeasibility is never blamed on delay (0.2325ms)
+✔ minute-grid oracle agrees over 200 deterministic small plans (5.6962ms)
+✔ invalid input is rejected with Arabic explanations (1.0486ms)
+✔ 8 tasks complete and joint conflict explains recoverable removal sets (2.3976ms)
+✔ local HTTP server restricts methods, paths, origin and host (98.8781ms)
+✔ hidden and idle time are excluded from active time but counted as wall time (1.0076ms)
+✔ local decisions survive reopening and clearing preserves unrelated data (1.5013ms)
+ℹ tests 11
 ℹ suites 0
-ℹ pass 10
+ℹ pass 11
 ℹ fail 0
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 403.416
+ℹ duration_ms 383.7895

@@ -160,3 +160,11 @@ flowchart LR
 ![حساب التفاعل SVG](docs/diagrams/timer.svg)
 
 صور الواجهة الفعلية تُضاف أثناء تحقق التسليم من المنسق. المخططات أعلاه توضيحية ولا تُعرض بوصفها لقطات شاشة.
+
+## صور النسخة المنفذة والتحقق النهائي
+
+![واجهة الموقع](docs/screenshots/final-desktop.png)
+
+![واجهة الجوال](docs/screenshots/final-mobile.png)
+
+تحقق المنسق من 11 اختبارًا ناجحًا دون احتساب نسخ dist، ومن رحلة المتصفح والتصدير والعرض بعرض 390px دون أخطاء JavaScript أو تجاوز أفقي. الأدلة في `docs/coordinator-final-tests.txt` و`docs/coordinator-browser-qa.json`. حالات التجربة مؤلفة ولا تمثل أثرًا اجتماعيًا مقاسًا.

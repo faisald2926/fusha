@@ -1,6 +1,11 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {solve,compareDelay,validatePlan} from '../src/scheduler.mjs';
+test('empty saved plan can reopen while analysis still requires a task',()=>{
+ assert.deepEqual(validatePlan([],[],600,{allowEmpty:true}),[]);
+ assert.equal(solve([],[],600).status,'invalid');
+ assert.ok(validatePlan([],[{start:600,end:700},{start:650,end:720}],600,{allowEmpty:true}).length>0);
+});
 const task=(id,duration,release,deadline)=>({id,title:id,duration,release,deadline});
 function validSchedule(tasks,blocks,now,schedule){
  assert.equal(schedule.length,tasks.length);

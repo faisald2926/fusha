@@ -1,0 +1,19 @@
+✔ production build contains executable site, core modules and real evidence (283.4622ms)
+✔ empty saved plan can reopen while analysis still requires a task (1.9038ms)
+✔ searches another order when earliest-deadline greedy fails (1.6047ms)
+✔ delay removes feasibility and every baseline interval satisfies constraints (0.6653ms)
+✔ pre-existing infeasibility is never blamed on delay (0.2246ms)
+✔ minute-grid oracle agrees over 200 deterministic small plans (5.0788ms)
+✔ invalid input is rejected with Arabic explanations (1.0975ms)
+✔ 8 tasks complete and joint conflict explains recoverable removal sets (1.6541ms)
+✔ local HTTP server restricts methods, paths, origin and host (109.7693ms)
+✔ hidden and idle time are excluded from active time but counted as wall time (0.8338ms)
+✔ local decisions survive reopening and clearing preserves unrelated data (1.4245ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 399.649

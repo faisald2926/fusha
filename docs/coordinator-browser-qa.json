@@ -1,0 +1,22 @@
+{
+  "id": "fusha",
+  "url": "http://127.0.0.1:4310",
+  "steps": [
+    {
+      "step": "30-minute comparison",
+      "message": "البداية الحالية تسمح بجدول ممكن، لكن التأخير ٣٠ دقيقة لا يترك ترتيبًا يحقق جميع القيود معًا. لا يعني ذلك أن التزامًا بعينه سيفشل حتمًا؛ هذه نتيجة للقيود مجتمعة."
+    },
+    {
+      "step": "decision survives reload"
+    },
+    {
+      "step": "actual JSON export download"
+    },
+    {
+      "step": "empty plan reload retains decisions and stays empty"
+    }
+  ],
+  "rtl": true,
+  "mobileNoOverflow": true,
+  "pageErrors": []
+}
