@@ -102,7 +102,7 @@ function decide(choice){
 }
 $('stop-decision').addEventListener('click',()=>decide('stop'));$('continue-decision').addEventListener('click',()=>decide('continue'));
 $('export-data').addEventListener('click',()=>{const blob=new Blob([JSON.stringify({...state,exportedAt:new Date().toISOString(),timer:lastTimer},null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='fusha-data.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);notice('صُدّرت بياناتك إلى ملف JSON.');});
-$('clear-data').addEventListener('click',()=>{try{clearData(localStorage);}catch{notice('تعذر الوصول إلى التخزين المحلي؛ مُسحت نسخة الذاكرة فقط.',true);}stopTimer();lastTimer={activeMs:0,wallMs:0,status:'stopped'};state=sample();render();updateTimer();notice('مُسحت بيانات فسحة. العينة الظاهرة غير محفوظة حتى تجري تعديلًا أو تسجل قرارًا.');});
+$('clear-data').addEventListener('click',()=>{let failed=false;try{clearData(localStorage);}catch{failed=true;}stopTimer();lastTimer={activeMs:0,wallMs:0,status:'stopped'};state=sample();render();updateTimer();notice(failed?'تعذر مسح النسخة المحفوظة؛ مُسحت بيانات الذاكرة فقط وقد تعود بعد إعادة التحميل.':'مُسحت بيانات فسحة. العينة الظاهرة غير محفوظة حتى تجري تعديلًا أو تسجل قرارًا.',failed);});
 let evidenceLoaded=false;
 async function loadEvidence(){
  if(evidenceLoaded)return;

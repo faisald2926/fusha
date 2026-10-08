@@ -1,6 +1,8 @@
 {
   "id": "fusha",
-  "url": "http://127.0.0.1:4310",
+  "url": "http://127.0.0.1:64691",
+  "isolated": true,
+  "status": "pass",
   "steps": [
     {
       "step": "30-minute comparison",
@@ -10,13 +12,24 @@
       "step": "decision survives reload"
     },
     {
-      "step": "actual JSON export download"
+      "step": "actual JSON export download retains the decision after reopening"
     },
     {
       "step": "empty plan reload retains decisions and stays empty"
+    },
+    {
+      "step": "failed Storage.prototype.removeItem keeps stored data and explains failure",
+      "failureMessage": "تعذر مسح النسخة المحفوظة؛ مُسحت بيانات الذاكرة فقط وقد تعود بعد إعادة التحميل."
     }
   ],
   "rtl": true,
   "mobileNoOverflow": true,
-  "pageErrors": []
+  "pageErrors": [],
+  "screenshots": {
+    "desktop": "fusha-desktop.png",
+    "desktopFull": "fusha-desktop-full.png",
+    "mobile": "fusha-mobile.png",
+    "visibleCredentials": false,
+    "visibleErrors": false
+  }
 }
