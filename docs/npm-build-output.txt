@@ -1,0 +1,7 @@
+
+> fusha@1.0.0 build
+> node scripts/build.mjs
+
+BUILD PASS: 8 production files, JavaScript syntax checked, zero runtime dependencies.
+Output: dist/
+Run: node dist/server.mjs
