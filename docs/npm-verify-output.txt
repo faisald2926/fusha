@@ -1,0 +1,25 @@
+
+> fusha@1.0.0 verify
+> node scripts/evidence.mjs && node scripts/build.mjs
+
+✔ production build contains executable site, core modules and real evidence (290.1358ms)
+✔ searches another order when earliest-deadline greedy fails (3.2917ms)
+✔ delay removes feasibility and every baseline interval satisfies constraints (1.8036ms)
+✔ pre-existing infeasibility is never blamed on delay (0.3944ms)
+✔ minute-grid oracle agrees over 200 deterministic small plans (5.4625ms)
+✔ invalid input is rejected with Arabic explanations (1.0999ms)
+✔ 8 tasks complete and joint conflict explains recoverable removal sets (3.2132ms)
+✔ local HTTP server restricts methods, paths, origin and host (120.9777ms)
+✔ hidden and idle time are excluded from active time but counted as wall time (2.0848ms)
+✔ local decisions survive reopening and clearing preserves unrelated data (1.7662ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 403.416
+BUILD PASS: 8 production files, JavaScript syntax checked, zero runtime dependencies.
+Output: dist/
+Run: node dist/server.mjs
