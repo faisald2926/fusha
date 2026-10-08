@@ -16,7 +16,7 @@ function notice(text,error=false){$('notice').textContent=text;$('notice').hidde
 function persist(){try{saveData(localStorage,state);}catch{storageAvailable=false;notice('تعذر حفظ البيانات. يمكنك تصدير نسخة من صفحة قراراتي وبياناتي.',true);}}
 function go(page){if(!pageNames[page])return;currentPage=page;document.querySelectorAll('.page').forEach(e=>e.hidden=e.id!==`page-${page}`);document.querySelectorAll('[data-page]').forEach(e=>{e.classList.toggle('active',e.dataset.page===page);if(e.dataset.page===page)e.setAttribute('aria-current','page');else e.removeAttribute('aria-current');});$('page-name').textContent=pageNames[page];location.hash=page;if(page==='evidence')loadEvidence();}
 function timeline(result,after){
- const start=state.now,end=Math.max(start+60,...state.tasks.map(t=>t.deadline),...state.blocks.filter(b=>b.end>start).map(b=>b.end));
+ const start=state.now,end=Math.min(1440,Math.max(start+60,...state.tasks.map(t=>t.deadline),...state.blocks.filter(b=>b.end>start).map(b=>b.end)));
  const width=700,left=40,right=660,range=Math.max(1,end-start),x=t=>right-(t-start)/range*(right-left);
  const colors=['#2b786b','#7b925c','#6e8898','#877baa','#b28755','#568b83','#908b69','#6b77a4'];
  let svg=`<svg class="timeline-svg" viewBox="0 0 ${width} 141" role="img" aria-label="${after?'جدول بعد التأخير':'جدول البداية الحالية'}"><title>${result.status==='feasible'?'جدول ممكن وفق القيود':'لا يوجد جدول ممكن وفق جميع القيود'}</title><rect x="${left}" y="34" width="${right-left}" height="43" rx="8" fill="#f3f6ef"/><rect x="${left}" y="91" width="${right-left}" height="17" rx="5" fill="#f8f9f5"/>`;
